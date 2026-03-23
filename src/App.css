@@ -213,3 +213,24 @@ section {
 
 /* Section hability */
 
+.container-hability {
+  background-color: rgb(24, 24, 24);
+  transition: 0.2s ease-in-out;
+}
+
+.container-hability:hover {
+  transform: scale(1.1);
+}
+
+.title-hability {
+  text-align: center;
+  height: auto;
+}
+
+.level_hability {
+  border: 2px solid transparent;
+  border-radius: 15px;
+  background:
+    linear-gradient(#1e1e1e, #1e1e1e) padding-box,
+    linear-gradient(to right, var(--primary), var(--primary-2), var(--accent)) border-box;
+}

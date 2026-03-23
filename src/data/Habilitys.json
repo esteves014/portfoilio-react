@@ -1,0 +1,66 @@
+[
+    {
+        "acronym": "HTML",
+        "name": "HTML",
+        "description": "Linguagem de marcação de Hipertexto.",
+        "backgroun": "rgb(96,0,0)",
+        "color": "rgb(182,0,0)",
+        "level_hability": 8
+    },
+    {
+        "acronym": "JS",
+        "name": "JavaScript",
+        "description": "Linguagem de programação interpretada de alto nível, essencial para o desenvolvimento web.",
+        "backgroun": "rgb(96,88,0)",
+        "color": "rgb(182,170,0)",
+        "level_hability": 7
+    },
+    {
+        "acronym": "CSS",
+        "name": "CSS",
+        "description": "Linguagem de estilo essencial utilizada para definir a aparência, layout e design de documentos HTML.",
+        "backgroun": "rgb(7,24,87)",
+        "color": "rgb(0,38,255)",
+        "level_hability": 8
+    },
+    {
+        "acronym": "RC",
+        "name": "React",
+        "description": "React é uma biblioteca de UI que cuida das manipulações diretas do DOM.",
+        "backgroun": "rgb(0,74,96)",
+        "color": "rgb(0,140,182)",
+        "level_hability": 4
+    },
+    {
+        "acronym": "LR",
+        "name": "Laravel",
+        "description": "LAravel é uma biblioteca de Backend que cuida das manipulações diretas de dados.",
+        "backgroun": "rgb(96,0,0)",
+        "color": "rgb(182,0,0)",
+        "level_hability": 6
+    },
+    {
+        "acronym": "BT",
+        "name": "Bootstrap",
+        "description": "LAravel é uma biblioteca de Backend que cuida das manipulações diretas de dados.",
+        "backgroun": "rgb(40,0,96)",
+        "color": "rgb(85,0,182)",
+        "level_hability": 8
+    },
+    {
+        "acronym": "VJ",
+        "name": "Vue.js",
+        "description": "LAravel é uma biblioteca de Backend que cuida das manipulações diretas de dados.",
+        "backgroun": "rgb(0,96,72)",
+        "color": "rgb(0,182,161)",
+        "level_hability": 6
+    },
+    {
+        "acronym": "JQ",
+        "name": "JQuery",
+        "description": "Biblioteca JavaScript rápida e leve, projetada para simplificar a manipulação de HTML, animações, interações etc.",
+        "backgroun": "rgb(96,69,0)",
+        "color": "rgb(182,140,0)",
+        "level_hability": 6
+    }
+]
