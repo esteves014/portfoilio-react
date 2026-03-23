@@ -5,10 +5,12 @@ import 'bootstrap-icons/font/bootstrap-icons.min.css';
 import { useEffect, useRef } from 'react';
 import SectionHome from './components/SectionHome';
 import SectionAbout from './components/SectionAbout';
+import SectionHability from './components/SectionHability';
 
 function App() {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
+  const habilityRef = useRef(null);
 
   const scrollToSection = (elementRef) => {
     window.scrollTo({
@@ -74,6 +76,12 @@ function App() {
                   About Me
                 </button>
               </li>
+
+              <li className="nav-item">
+                <button className="nav-link btn btn-link text-white" onClick={() => scrollToSection(habilityRef)}>
+                  Hability
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -82,6 +90,7 @@ function App() {
       <main style={{ marginTop: '80px' }}>
         <SectionHome ref={homeRef} />
         <SectionAbout ref={aboutRef} />
+        <SectionHability ref={habilityRef} />
       </main>
     </>
   );
