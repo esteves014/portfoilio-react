@@ -50,7 +50,7 @@
     {
         "acronym": "VJ",
         "name": "Vue.js",
-        "description": "LAravel é uma biblioteca de Backend que cuida das manipulações diretas de dados.",
+        "description": "Laravel é uma biblioteca de Backend que cuida das manipulações diretas de dados.",
         "backgroun": "rgb(0,96,72)",
         "color": "rgb(0,182,161)",
         "level_hability": 6

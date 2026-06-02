@@ -17,7 +17,6 @@ const SectionHability = forwardRef((props, ref) => {
                             <h1 className='title-hability p-5 mb-3 rounded-top' style={{ color: hability.color, backgroundColor: hability.backgroun }}>{hability.acronym}</h1>
                             <h2>{hability.name}</h2>
                             <p>{hability.description}</p>
-                            <p className='level_hability px-3 text-center'>Nível de habilidade(1 a 10): {hability.level_hability}</p>
                         </div>
                     </div>
                 ))}
