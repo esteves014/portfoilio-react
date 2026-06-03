@@ -59,6 +59,8 @@ function App() {
         homeRef={homeRef}
         aboutRef={aboutRef}
         habilityRef={habilityRef}
+        projectRef={projectRef}
+        qualifyRef={qualifyRef}
       />
 
       <main style={{ marginTop: '80px' }}>

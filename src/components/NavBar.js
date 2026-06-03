@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NavBar = ({ scrollToSection, homeRef, aboutRef, habilityRef }) => {
+const NavBar = ({ scrollToSection, homeRef, aboutRef, qualifyRef, habilityRef, projectRef }) => {
     return (
         <nav className="navbar navbar-expand-lg fixed-top bg-black navbar-dark">
             <div className="container">
@@ -29,8 +29,18 @@ const NavBar = ({ scrollToSection, homeRef, aboutRef, habilityRef }) => {
                         </li>
 
                         <li className="nav-item">
+                            <button className="nav-link btn btn-link text-white" onClick={() => scrollToSection(qualifyRef)}>
+                                Qualifications
+                            </button>
+                        </li>
+                        <li className="nav-item">
                             <button className="nav-link btn btn-link text-white" onClick={() => scrollToSection(habilityRef)}>
                                 Hability
+                            </button>
+                        </li>
+                        <li className="nav-item">
+                            <button className="nav-link btn btn-link text-white" onClick={() => scrollToSection(projectRef)}>
+                                Projects
                             </button>
                         </li>
                     </ul>
