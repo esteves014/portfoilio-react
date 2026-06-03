@@ -1,14 +1,19 @@
-// src/App.js
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.min.css';
 import { useEffect, useRef } from 'react';
 import SectionHome from './components/SectionHome';
 import SectionAbout from './components/SectionAbout';
+import SectionHability from './components/SectionHability';
+import SectionProject from './components/SectionProject';
+import SectionQualify from './components/SectionQualify';
+import NavBar from './components/NavBar';
 
 function App() {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
+  const habilityRef = useRef(null);
+  const projectRef = useRef(null);
+  const qualifyRef = useRef(null);
+  
 
   const scrollToSection = (elementRef) => {
     window.scrollTo({
@@ -49,39 +54,19 @@ function App() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg fixed-top bg-black navbar-dark">
-        <div className="container">
-          <button
-            className="navbar-brand btn btn-link text-white span-home p-0"
-            onClick={() => scrollToSection(homeRef)}
-          >
-            Vitor Miguel
-          </button>
-
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <button className="nav-link btn btn-link text-white" onClick={() => scrollToSection(homeRef)}>
-                  Home
-                </button>
-              </li>
-              <li className="nav-item">
-                <button className="nav-link btn btn-link text-white" onClick={() => scrollToSection(aboutRef)}>
-                  About Me
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <NavBar
+        scrollToSection={scrollToSection}
+        homeRef={homeRef}
+        aboutRef={aboutRef}
+        habilityRef={habilityRef}
+      />
 
       <main style={{ marginTop: '80px' }}>
         <SectionHome ref={homeRef} />
         <SectionAbout ref={aboutRef} />
+        <SectionQualify ref={qualifyRef} />
+        <SectionHability ref={habilityRef} />
+        <SectionProject ref={projectRef} />
       </main>
     </>
   );

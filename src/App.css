@@ -1,4 +1,3 @@
-/* src/App.css */
 .hidden {
   opacity: 0;
   filter: blur(10px);
@@ -41,21 +40,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
   min-height: 100vh;
 }
-
-#load .ring {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  animation: ring 2s linear infinite;
-}
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  display: block;
+  background: rgba(255,255,255,0.02);
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.06);
 
 #load .ring::before {
   position: absolute;
   content: '';
+  flex: 1 1 auto;
   left: 0;
   top: 0;
   height: 100%;
@@ -210,4 +211,206 @@ section {
   align-items: center;
   place-items: center;
   min-height: 100vh;
+}
+
+/* Section About */
+
+.btn-download {
+  border: 2px solid transparent;
+  border-radius: 15px;
+  background:
+    linear-gradient(black, black) padding-box,
+    linear-gradient(to right, var(--primary), var(--primary-2), var(--accent)) border-box;
+  background-clip: padding-box, border-box;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-download:hover {
+  background:
+    linear-gradient(to right, var(--primary), var(--primary-2), var(--accent)) padding-box,
+    linear-gradient(to right, var(--primary), var(--primary-2), var(--accent)) border-box;
+  color: white;
+}
+
+.section-qualify .accordion {
+  margin-top: 2rem;
+}
+
+.section-qualify .accordion-item {
+  border: 1px solid rgba(146, 0, 190, 0.35);
+  background: rgba(9, 6, 18, 0.94);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.02), 0 12px 40px rgba(53, 0, 139, 0.15);
+}
+
+.section-qualify .accordion-button {
+  color: var(--text);
+  background: rgba(31, 20, 45, 0.92);
+  border: none;
+  padding: 1.2rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: none;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.section-qualify .accordion-button:hover,
+.section-qualify .accordion-button:focus {
+  background: rgba(53, 0, 139, 0.18);
+  color: var(--text);
+}
+
+.section-qualify .accordion-button:not(.collapsed) {
+  background: linear-gradient(90deg, rgba(53, 0, 139, 0.25), rgba(146, 0, 190, 0.16));
+}
+
+.section-qualify .accordion-button::after {
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.section-qualify .accordion-button.collapsed::after {
+  content: '+';
+}
+
+.section-qualify .accordion-button:not(.collapsed)::after {
+  content: '−';
+}
+
+.section-qualify .accordion-body {
+  background: rgba(20, 16, 28, 0.95);
+  border-top: 1px solid rgba(146, 0, 190, 0.25);
+  padding: 1.5rem;
+  color: var(--text);
+}
+
+.section-qualify .qualify-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+
+.section-qualify .qualify-item p,
+.section-qualify .qualify-item ul,
+.section-qualify .qualify-item li {
+  margin-bottom: 0.35rem;
+  color: var(--text);
+}
+
+.section-qualify .qualify-progress {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.section-qualify .qualify-progress--low {
+  color: var(--text);
+}
+
+.section-qualify .accordion-item + .accordion-item {
+  margin-top: 1rem;
+}
+
+/* Section hability */
+
+.container-hability {
+  background-color: rgb(24, 24, 24);
+  transition: 0.2s ease-in-out;
+}
+
+.container-hability:hover {
+  transform: scale(1.1);
+}
+
+.title-hability {
+  text-align: center;
+  height: auto;
+}
+
+.level_hability {
+  border: 2px solid transparent;
+  border-radius: 15px;
+  background:
+    linear-gradient(#1e1e1e, #1e1e1e) padding-box,
+    linear-gradient(to right, var(--primary), var(--primary-2), var(--accent)) border-box;
+}
+
+/* Project cards */
+.section-project {
+  display: block;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.project-card {
+  background: rgba(12,10,16,0.6);
+  border: 1px solid rgba(146,0,190,0.12);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  display: flex;
+  align-items: center;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(53,0,139,0.12);
+}
+
+.project-thumb {
+  width: auto;
+  height: 300px;
+  object-fit: contain;
+  display: block;
+  background: rgba(255,255,255,0.02);
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.07);
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .project-thumb {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .project-thumb {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+  .project-info {
+    margin-top: 0.75rem;
+  }
+}
+
+.skill-badge .badge-icon {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+/* Make sure project texts are visible even when parent styles conflict */
+.project-card,
+.project-card * {
+  color: var(--text) !important;
+}
+
+.project-card .project-info {
+  min-width: 0;
+  flex: 1 1 auto;
 }

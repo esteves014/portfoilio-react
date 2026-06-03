@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 
 const SectionAbout = forwardRef((props, ref) => {
     return (
@@ -17,26 +17,16 @@ const SectionAbout = forwardRef((props, ref) => {
                     </div>
 
                     <p>
-                        Olá, meu nome é Vitor Miguel, sou estudante de Sistemas para Internet na FATEC (Faculdade de
-                        Tecnologia) de Lins, localizada no interior de São Paulo. Desde sempre tive grande interesse pela
-                        área de tecnologia, cursei inicialmente Informática para Internet e, posteriormente, Marketing na
-                        Etec de Lins, onde pude aprimorar meu conhecimento nas áreas de desenvolvimento web e estratégias de
-                        comunicação digital.
-                        <br /><br />
-                        Ao longo do meu percurso acadêmico, adquiri uma sólida experiência em desenvolvimento de sistemas e
-                        aplicações web, sou focado em desenvolvimento full stack, o que me permite trabalhar tanto no
-                        front-end quanto no back-end de projetos. Realizei vários projetos pessoais, sempre buscando
-                        entregar soluções eficientes e de qualidade. Além disso, atualmente, trabalho como freelancer para
-                        uma microempresa, onde sou responsável pelo desenvolvimento de sites utilizando tecnologias como
-                        HTML, CSS, PHP, JavaScript e Bootstrap.
-                        <br /><br />
-                        A minha experiência prática me proporcionou habilidades essenciais como trabalho em equipe, onde
-                        coloco em prática minha capacidade de colaboração e comunicação para atingir os objetivos do grupo.
-                        Também sou bastante focado em produtividade, buscando sempre otimizar meus processos para garantir
-                        que as entregas sejam feitas de forma eficiente e dentro dos prazos definidos. Além disso, sou muito
-                        dedicado à resolução de problemas, habilidade que considero essencial no dia a dia de um
-                        desenvolvedor, especialmente quando surgem desafios inesperados durante o desenvolvimento do sistema.
+                        Olá, sou o Vitor Miguel! Sou desenvolvedor web Full Stack e estudante de Sistemas para Internet na FATEC Lins. Com formação prévia em Informática para Internet e Marketing, busco sempre unir a excelência técnica com uma visão estratégica de comunicação digital.
                     </p>
+
+                    <p>
+                        Tenho experiência prática na criação de sistemas e aplicações web de ponta a ponta, utilizando tecnologias como PHP, JavaScript, HTML, CSS e Bootstrap. Atualmente, atuo como freelancer ajudando microempresas a digitalizarem seus negócios com soluções sob medida. No dia a dia, valorizo muito a produtividade, a comunicação clara em equipe e a resolução eficiente de problemas para garantir que cada projeto seja entregue com alta qualidade e dentro do prazo.
+                    </p>
+
+                    <a href="/archives/vitor_esteves_cv.pdf" className='text-decoration-none' download="vitor_esteves_cv.pdf">
+                        <button className='btn-download text-white px-5 py-2 align-items-center justify-content-center d-flex gap-2 text-center'>Baixar CV <i class="bi bi-cloud-arrow-down fs-5"></i></button>
+                    </a>
                 </div>
             </div>
         </section>

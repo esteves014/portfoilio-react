@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect } from 'react';
+import { forwardRef, useEffect } from 'react';
 
 const SectionHome = forwardRef((props, ref) => {
     useEffect(() => {
@@ -59,7 +59,7 @@ const SectionHome = forwardRef((props, ref) => {
                     Full Stack Developer Laravel, PHP, MySQL, <br /> javascript, HTML, CSS and Bootstrap
                 </p>
 
-                <div className="d-flex g-2 m-auto w-100 justify-content-around mt-4" role="group" aria-label="Group of buttons">
+                <div className="d-flex m-auto container-fluid justify-content-around mt-4" style={{gap: '20px'}} role="group" aria-label="Group of buttons">
                     <button type="button" className="btn btn-outline text-white"><i className="bi bi-github"></i> Github</button>
                     <button type="button" className="btn btn-outline text-white"><i className="bi bi-instagram"></i> Instagram</button>
                     <button type="button" className="btn btn-outline text-white"><i className="bi bi-linkedin"></i> LinkedIn</button>
