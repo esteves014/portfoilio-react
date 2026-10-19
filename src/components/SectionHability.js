@@ -21,23 +21,7 @@ const SectionHability = forwardRef((props, ref) => {
                                 <span className='skill-icon'>{hability.acronym}</span>
                                 <h2 className='h5 mb-0'>{hability.name}</h2>
                             </div>
-                            <p className='skill-description'>{hability.description}</p>
-                            <div className='mt-auto'>
-                                <div className='d-flex justify-content-between skill-level-label'>
-                                    <span>Nível</span>
-                                    <span>{hability.level_hability}/10</span>
-                                </div>
-                                <div
-                                    className='skill-level'
-                                    role='meter'
-                                    aria-label={`Nível em ${hability.name}`}
-                                    aria-valuemin={0}
-                                    aria-valuemax={10}
-                                    aria-valuenow={hability.level_hability}
-                                >
-                                    <div className='skill-level-fill' style={{ width: `${hability.level_hability * 10}%` }}></div>
-                                </div>
-                            </div>
+                            <p className='skill-description mb-0'>{hability.description}</p>
                         </div>
                     </div>
                 ))}

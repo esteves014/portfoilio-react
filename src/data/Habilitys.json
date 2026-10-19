@@ -4,63 +4,76 @@
         "name": "HTML",
         "description": "Linguagem de marcação de Hipertexto.",
         "backgroun": "rgb(96,0,0)",
-        "color": "rgb(182,0,0)",
-        "level_hability": 8
+        "color": "rgb(182,0,0)"
     },
     {
         "acronym": "JS",
         "name": "JavaScript",
         "description": "Linguagem de programação interpretada de alto nível, essencial para o desenvolvimento web.",
         "backgroun": "rgb(96,88,0)",
-        "color": "rgb(182,170,0)",
-        "level_hability": 7
+        "color": "rgb(182,170,0)"
     },
     {
         "acronym": "CSS",
         "name": "CSS",
         "description": "Linguagem de estilo essencial utilizada para definir a aparência, layout e design de documentos HTML.",
         "backgroun": "rgb(7,24,87)",
-        "color": "rgb(0,38,255)",
-        "level_hability": 8
+        "color": "rgb(0,38,255)"
     },
     {
         "acronym": "RC",
         "name": "React",
         "description": "React é uma biblioteca de UI que cuida das manipulações diretas do DOM.",
         "backgroun": "rgb(0,74,96)",
-        "color": "rgb(0,140,182)",
-        "level_hability": 4
+        "color": "rgb(0,140,182)"
     },
     {
         "acronym": "LR",
         "name": "Laravel",
         "description": "Framework PHP para back-end, com rotas, ORM, autenticação e filas prontos para uso.",
         "backgroun": "rgb(96,0,0)",
-        "color": "rgb(182,0,0)",
-        "level_hability": 6
+        "color": "rgb(182,0,0)"
     },
     {
         "acronym": "BT",
         "name": "Bootstrap",
         "description": "Framework CSS com grid responsivo e componentes prontos para criar interfaces rapidamente.",
         "backgroun": "rgb(40,0,96)",
-        "color": "rgb(85,0,182)",
-        "level_hability": 8
+        "color": "rgb(85,0,182)"
     },
     {
         "acronym": "VJ",
         "name": "Vue.js",
         "description": "Framework JavaScript progressivo para construir interfaces reativas baseadas em componentes.",
         "backgroun": "rgb(0,96,72)",
-        "color": "rgb(0,182,161)",
-        "level_hability": 6
+        "color": "rgb(0,182,161)"
     },
     {
         "acronym": "JQ",
         "name": "JQuery",
         "description": "Biblioteca JavaScript rápida e leve, projetada para simplificar a manipulação de HTML, animações, interações etc.",
         "backgroun": "rgb(96,69,0)",
-        "color": "rgb(182,140,0)",
-        "level_hability": 6
+        "color": "rgb(182,140,0)"
+    },
+    {
+        "acronym": "FL",
+        "name": "Flutter",
+        "description": "Framework do Google para criar aplicativos multiplataforma (Android, iOS e web) a partir de um único código em Dart.",
+        "backgroun": "rgb(0,60,110)",
+        "color": "rgb(2,160,230)"
+    },
+    {
+        "acronym": "JV",
+        "name": "Java",
+        "description": "Linguagem orientada a objetos, robusta e multiplataforma, muito usada em sistemas corporativos e no back-end.",
+        "backgroun": "rgb(96,40,0)",
+        "color": "rgb(230,110,20)"
+    },
+    {
+        "acronym": "SP",
+        "name": "Spring",
+        "description": "Framework Java para criar APIs e aplicações back-end com injeção de dependências, segurança e acesso a dados.",
+        "backgroun": "rgb(30,80,20)",
+        "color": "rgb(109,179,63)"
     }
 ]
