@@ -986,6 +986,7 @@ section {
 }
 
 .contact-status.error,
+.contact-status.activation,
 .contact-status.unconfigured {
   color: #ff8fa6;
 }

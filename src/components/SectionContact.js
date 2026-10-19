@@ -30,32 +30,50 @@ const SectionContact = forwardRef((props, ref) => {
         e.preventDefault()
         if (!validate()) return
 
-        if (contact.formspreeId) {
-            setStatus('sending')
-            try {
-                const response = await fetch(`https://formspree.io/f/${contact.formspreeId}`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-                    body: JSON.stringify(form),
-                })
-                if (!response.ok) throw new Error('Falha no envio')
-                setStatus('success')
-                setForm(emptyForm)
-            } catch {
-                setStatus('error')
+        // Campo invisível: só robôs de spam preenchem
+        if (e.target.elements._honey.value) return
+
+        if (!contact.formspreeId && !contact.email) {
+            setStatus('unconfigured')
+            return
+        }
+
+        const subject = form.subject || `Contato pelo portfólio - ${form.name}`
+
+        // Formspree, se configurado; senão FormSubmit, que encaminha direto para o e-mail
+        const request = contact.formspreeId
+            ? { url: `https://formspree.io/f/${contact.formspreeId}`, body: { ...form, _subject: subject } }
+            : {
+                url: `https://formsubmit.co/ajax/${contact.email}`,
+                body: {
+                    name: form.name,
+                    email: form.email,
+                    message: form.message,
+                    _subject: subject,
+                    _replyto: form.email,
+                    _template: 'table',
+                    _captcha: 'false',
+                },
             }
-            return
-        }
 
-        if (contact.email) {
-            const subject = encodeURIComponent(form.subject || `Contato pelo portfólio - ${form.name}`)
-            const body = encodeURIComponent(`${form.message}\n\n${form.name}\n${form.email}`)
-            window.location.href = `mailto:${contact.email}?subject=${subject}&body=${body}`
-            setStatus('mailto')
-            return
+        setStatus('sending')
+        try {
+            const response = await fetch(request.url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+                body: JSON.stringify(request.body),
+            })
+            const data = await response.json().catch(() => ({}))
+            const failed = !response.ok || data.success === false || data.success === 'false'
+            if (failed) {
+                setStatus(/activat/i.test(data.message || '') ? 'activation' : 'error')
+                return
+            }
+            setStatus('success')
+            setForm(emptyForm)
+        } catch {
+            setStatus('error')
         }
-
-        setStatus('unconfigured')
     }
 
     return (
@@ -65,6 +83,7 @@ const SectionContact = forwardRef((props, ref) => {
             <div className="row g-4">
                 <div className="col-12 col-lg-7">
                     <form className="contact-card h-100" onSubmit={handleSubmit} noValidate>
+                        <input type="text" name="_honey" className="d-none" tabIndex="-1" autoComplete="off" aria-hidden="true" />
                         <div className="row g-3">
                             <div className="col-12 col-md-6">
                                 <label htmlFor="contact-name" className="contact-label">Nome</label>
@@ -135,7 +154,7 @@ const SectionContact = forwardRef((props, ref) => {
                             <span className={`contact-status ${status}`} role="status" aria-live="polite">
                                 {status === 'success' && 'Mensagem enviada! Obrigado pelo contato.'}
                                 {status === 'error' && 'Não foi possível enviar agora. Tente novamente em instantes.'}
-                                {status === 'mailto' && 'Abrimos seu aplicativo de e-mail com a mensagem pronta.'}
+                                {status === 'activation' && 'Formulário aguardando ativação. Tente novamente em alguns minutos.'}
                                 {status === 'unconfigured' && 'O envio de mensagens ainda não foi configurado.'}
                             </span>
                         </div>
