@@ -518,16 +518,47 @@ a.home-social:hover {
   box-shadow: var(--shadow-1), 0 4px 16px rgba(0, 0, 0, 0.45);
 }
 
-.container-title {
-  width: fit-content;
+.section-title {
+  margin-bottom: 2.5rem;
 }
 
-.effect-gradient {
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(to right, var(--primary), var(--primary-2), var(--accent));
-  margin: 10px 0 20px 0;
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #c77dff;
+}
+
+.section-eyebrow::before {
+  content: '';
+  width: 32px;
+  height: 2px;
   border-radius: 2px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+}
+
+.section-number {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.section-title h2 {
+  margin: 0.6rem 0 0;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.section-subtitle {
+  margin: 0.75rem 0 0;
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.05rem;
 }
 
 .circle-extern {

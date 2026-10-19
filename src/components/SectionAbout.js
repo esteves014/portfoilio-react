@@ -1,4 +1,5 @@
 import { forwardRef } from 'react';
+import SectionTitle from './SectionTitle'
 import qualifications from './../data/Qualifications.json'
 import projects from './../data/Projects.json'
 
@@ -19,10 +20,7 @@ const SectionAbout = forwardRef((props, ref) => {
                 </div>
 
                 <div className="col-md-7 hidden text-white">
-                    <div className="container-title">
-                        <h1>Sobre mim</h1>
-                        <div className="effect-gradient"></div>
-                    </div>
+                    <SectionTitle number="01" eyebrow="Quem sou" title="Sobre mim" />
 
                     <p className="about-lead">
                         Olá, sou o <strong>Vitor Miguel</strong>, desenvolvedor web Full Stack e estudante de

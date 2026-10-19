@@ -1,4 +1,5 @@
 import React, { forwardRef, useState } from 'react'
+import SectionTitle from './SectionTitle'
 import qualifications from './../data/Qualifications.json'
 
 const tabs = [
@@ -11,10 +12,7 @@ const SectionQualify = forwardRef((props, ref) => {
 
     return (
         <section id="qualify" ref={ref} className="container hidden section-qualify">
-            <div className="container-title me-auto">
-                <h1>Qualificações</h1>
-                <div className="effect-gradient"></div>
-            </div>
+            <SectionTitle number="02" eyebrow="Trajetória" title="Qualificações" subtitle="Minha experiência profissional e formação acadêmica." />
 
             <div className="qualify-tabs" role="tablist">
                 {tabs.map(tab => (

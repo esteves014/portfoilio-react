@@ -1,14 +1,12 @@
 import React, { forwardRef } from 'react'
+import SectionTitle from './SectionTitle'
 import projects from './../data/Projects.json'
 import habilitys from './../data/Habilitys.json'
 
 const SectionProject = forwardRef((props, ref) => {
     return (
         <section id="project" ref={ref} className="container hidden section-project">
-            <div className="container-title me-auto">
-                <h1>Projetos</h1>
-                <div className="effect-gradient"></div>
-            </div>
+            <SectionTitle number="04" eyebrow="Portfólio" title="Projetos" subtitle="Alguns dos trabalhos que desenvolvi." />
 
             <div className='row g-4'>
 
