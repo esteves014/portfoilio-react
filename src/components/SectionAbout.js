@@ -11,8 +11,8 @@ const highlights = [
 const SectionAbout = forwardRef((props, ref) => {
     return (
         <section id="about-me" ref={ref} className="container hidden">
-            <div className="row align-items-center g-5">
-                <div className="col-md-5 d-flex justify-content-center align-items-center hidden">
+            <div className="row align-items-center gx-4 gy-5">
+                <div className="col-md-5 d-flex justify-content-center align-items-center hidden about-photo">
                     <div className="circle-extern">
                         <div id="img-me" role="img" aria-label="Foto de Vitor Miguel"></div>
                     </div>

@@ -42,6 +42,8 @@ function App() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
+          // Filhos animados ficam fora da tela (translateX) e nunca seriam detectados sozinhos no celular
+          entry.target.querySelectorAll('.hidden').forEach(el => el.classList.add('show'));
         }
       });
     }, observerOptions);
