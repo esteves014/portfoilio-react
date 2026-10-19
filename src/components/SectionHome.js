@@ -1,8 +1,9 @@
 import { forwardRef, useEffect } from 'react';
+import socials from './../data/Socials.json'
 
-const SectionHome = forwardRef((props, ref) => {
+const SectionHome = forwardRef(({ onViewProjects, onScrollDown }, ref) => {
     useEffect(() => {
-        const buttons = document.querySelectorAll('.btn-outline');
+        const buttons = document.querySelectorAll('#home .btn-outline');
 
         const handleMouseMove = (e, button) => {
             const rect = button.getBoundingClientRect();
@@ -52,22 +53,49 @@ const SectionHome = forwardRef((props, ref) => {
     }, []);
 
     return (
-        <section id="home" ref={ref} className="container-fluid p-5 d-flex align-items-center justify-content-center h-100 position-relative overflow-hidden">
-            <div className="w-max-content z-10 position-relative">
-                <h1 className="text-center text-white">
-                    Hi, <span className="span-home">I'm Vitor Miguel</span> ---- <br />
-                    <span className="span-home">Full Stack Developer</span>
+        <section id="home" ref={ref} className="section-home container-fluid position-relative overflow-hidden">
+            <div className="home-glow home-glow-1" aria-hidden="true"></div>
+            <div className="home-glow home-glow-2" aria-hidden="true"></div>
+
+            <div className="home-content text-center position-relative">
+                <span className="home-badge">
+                    <span className="home-badge-dot"></span> Desenvolvedor Full Stack
+                </span>
+
+                <h1 className="home-title">
+                    Olá, eu sou <span className="span-home">Vitor Miguel</span>
                 </h1>
-                <p className="text-center text-white my-4">
-                    Full Stack Developer Laravel, PHP, MySQL, <br /> javascript, HTML, CSS and Bootstrap
+
+                <p className="home-lead">
+                    Crio sistemas e aplicações web de ponta a ponta com Laravel, Vue.js, PHP e MySQL,
+                    ajudando empresas a digitalizarem seus negócios.
                 </p>
 
-                <div className="d-flex m-auto container-fluid justify-content-around mt-4" style={{gap: '20px'}} role="group" aria-label="Group of buttons">
-                    <button type="button" className="btn btn-outline text-white"><i className="bi bi-github"></i> Github</button>
-                    <button type="button" className="btn btn-outline text-white"><i className="bi bi-instagram"></i> Instagram</button>
-                    <button type="button" className="btn btn-outline text-white"><i className="bi bi-linkedin"></i> LinkedIn</button>
+                <div className="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                    <button type="button" className="btn-gradient" onClick={onViewProjects}>
+                        Ver projetos <i className="bi bi-arrow-right ms-1"></i>
+                    </button>
+                    <a href="/archives/vitor_esteves_cv.pdf" download="vitor_esteves_cv.pdf" className="btn btn-outline text-white">
+                        <i className="bi bi-cloud-arrow-down me-1"></i> Baixar CV
+                    </a>
+                </div>
+
+                <div className="d-flex justify-content-center gap-3 mt-4" role="group" aria-label="Redes sociais">
+                    {socials.map(social => social.url ? (
+                        <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" className="home-social" aria-label={social.name} title={social.name}>
+                            <i className={`bi ${social.icon}`}></i>
+                        </a>
+                    ) : (
+                        <span key={social.name} className="home-social" aria-label={social.name} title={social.name}>
+                            <i className={`bi ${social.icon}`}></i>
+                        </span>
+                    ))}
                 </div>
             </div>
+
+            <button type="button" className="home-scroll" onClick={onScrollDown} aria-label="Rolar para Sobre mim">
+                <i className="bi bi-chevron-down"></i>
+            </button>
         </section>
     );
 });

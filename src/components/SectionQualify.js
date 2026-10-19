@@ -1,6 +1,14 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useState } from 'react'
+import qualifications from './../data/Qualifications.json'
+
+const tabs = [
+    { key: 'experience', label: 'Experiência', icon: 'bi-briefcase' },
+    { key: 'education', label: 'Formação', icon: 'bi-mortarboard' },
+]
 
 const SectionQualify = forwardRef((props, ref) => {
+    const [activeTab, setActiveTab] = useState('experience')
+
     return (
         <section id="qualify" ref={ref} className="container hidden section-qualify">
             <div className="container-title me-auto">
@@ -8,112 +16,50 @@ const SectionQualify = forwardRef((props, ref) => {
                 <div className="effect-gradient"></div>
             </div>
 
-            <div className="accordion container-fluid" id="accordionPanelsStayOpenExample">
-                <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingOne">
-                        <button
-                            className="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne"
-                            aria-expanded="true"
-                            aria-controls="collapseOne"
-                        >
-                            Experiência
-                        </button>
-                    </h2>
-                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPanelsStayOpenExample">
-                        <div className="accordion-body">
-                            <div className="qualify-item">
-                                <h3>Sonnitech</h3>
-                                <p>Estagiário de desenvolvimento</p>
-                                <p>outubro de 2025 – Atual</p>
-                                <ul>
-                                    <li>Desenvolvimento Full Stack de aplicações web com Laravel, Vue.js, jQuery e MySQL.</li>
-                                    <li>Integração com APIs REST e otimização de consultas ao banco de dados.</li>
-                                    <li>Resolução de bugs em produção e suporte à sustentação do sistema.</li>
-                                </ul>
-                            </div>
-                            <div className="qualify-item mt-4">
-                                <h3>Cida Magazine</h3>
-                                <p>Analista de mídia online</p>
-                                <p>março de 2025 – outubro de 2025</p>
-                                <ul>
-                                    <li>Produção de conteúdo visual e redação publicitária para rádio e redes sociais.</li>
-                                    <li>Análise de métricas de engajamento para direcionar campanhas.</li>
-                                    <li>Configuração e suporte para transmissões ao vivo.</li>
-                                </ul>
-                            </div>
-                            <div className="qualify-item mt-4">
-                                <h3>Jcs Sistemas</h3>
-                                <p>Desenvolvedor web</p>
-                                <p>julho de 2024 – setembro de 2025</p>
-                                <ul>
-                                    <li>Desenvolvimento de páginas front-end.</li>
-                                    <li>Desenvolvimento de back-end e banco de dados.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div className="qualify-tabs" role="tablist">
+                {tabs.map(tab => (
+                    <button
+                        key={tab.key}
+                        type="button"
+                        role="tab"
+                        aria-selected={activeTab === tab.key}
+                        className={`qualify-tab ${activeTab === tab.key ? 'active' : ''}`}
+                        onClick={() => setActiveTab(tab.key)}
+                    >
+                        <i className={`bi ${tab.icon} me-2`}></i>{tab.label}
+                    </button>
+                ))}
+            </div>
 
-                <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingTwo">
-                        <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="collapseTwo"
-                        >
-                            Formação
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionPanelsStayOpenExample">
-                        <div className="accordion-body">
-                            <div className="qualify-item">
-                                <h3>Fatec Lins</h3>
-                                <p>Curso Superior em Sistema para Internet</p>
-                                <p>fevereiro de 2024 – dezembro de 2026</p>
+            <ol className="timeline" role="tabpanel">
+                {qualifications[activeTab].map((item, index) => (
+                    <li key={`${activeTab}-${index}`} className={`timeline-item ${item.current ? 'current' : ''}`}>
+                        <div className="timeline-card">
+                            <div className="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                                <div>
+                                    <h2 className="h5 mb-1">{item.title}</h2>
+                                    <span className="timeline-place">{item.place}</span>
+                                </div>
+                                <span className="timeline-period">
+                                    <i className="bi bi-calendar3 me-1"></i>{item.period}
+                                </span>
                             </div>
-                            <div className="qualify-item mt-4">
-                                <h3>Etec Lins</h3>
-                                <p>Técnico em Informática para Internet</p>
-                                <p>fevereiro de 2021 – dezembro de 2023</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingThree">
-                        <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree"
-                            aria-expanded="false"
-                            aria-controls="collapseThree"
-                        >
-                            Competências
-                        </button>
-                    </h2>
-                    <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionPanelsStayOpenExample">
-                        <div className="accordion-body">
-                            <div className="qualify-item">
-                                <h3>Áreas de atuação</h3>
-                                <ul>
-                                    <li>Laravel</li>
-                                    <li>Vue.js</li>
-                                    <li>GitFlow</li>
-                                    <li>Docker</li>
-                                    <li>MySQL</li>
-                                    <li>Desenvolvimento Full Stack</li>
+                            {item.items && (
+                                <ul className="timeline-list mb-0">
+                                    {item.items.map((text, i) => <li key={i}>{text}</li>)}
                                 </ul>
-                            </div>
+                            )}
                         </div>
-                    </div>
+                    </li>
+                ))}
+            </ol>
+
+            <div className="qualify-competencies">
+                <h2 className="h6 mb-3">Também trabalho com</h2>
+                <div className="d-flex flex-wrap gap-2">
+                    {qualifications.competencies.map((name, i) => (
+                        <span key={i} className="competency-tag">{name}</span>
+                    ))}
                 </div>
             </div>
         </section>

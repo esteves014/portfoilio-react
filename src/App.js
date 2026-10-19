@@ -64,7 +64,11 @@ function App() {
       />
 
       <main style={{ marginTop: '80px' }}>
-        <SectionHome ref={homeRef} />
+        <SectionHome
+          ref={homeRef}
+          onViewProjects={() => scrollToSection(projectRef)}
+          onScrollDown={() => scrollToSection(aboutRef)}
+        />
         <SectionAbout ref={aboutRef} />
         <SectionQualify ref={qualifyRef} />
         <SectionHability ref={habilityRef} />

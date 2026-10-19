@@ -1,0 +1,48 @@
+{
+    "experience": [
+        {
+            "title": "Estagiário de desenvolvimento",
+            "place": "Sonnitech",
+            "period": "out. 2025 – Atual",
+            "current": true,
+            "items": [
+                "Desenvolvimento Full Stack de aplicações web com Laravel, Vue.js, jQuery e MySQL.",
+                "Integração com APIs REST e otimização de consultas ao banco de dados.",
+                "Resolução de bugs em produção e suporte à sustentação do sistema."
+            ]
+        },
+        {
+            "title": "Analista de mídia online",
+            "place": "Cida Magazine",
+            "period": "mar. 2025 – out. 2025",
+            "items": [
+                "Produção de conteúdo visual e redação publicitária para rádio e redes sociais.",
+                "Análise de métricas de engajamento para direcionar campanhas.",
+                "Configuração e suporte para transmissões ao vivo."
+            ]
+        },
+        {
+            "title": "Desenvolvedor web",
+            "place": "Jcs Sistemas",
+            "period": "jul. 2024 – set. 2025",
+            "items": [
+                "Desenvolvimento de páginas front-end.",
+                "Desenvolvimento de back-end e banco de dados."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "title": "Curso Superior em Sistemas para Internet",
+            "place": "Fatec Lins",
+            "period": "fev. 2024 – dez. 2026",
+            "current": true
+        },
+        {
+            "title": "Técnico em Informática para Internet",
+            "place": "Etec Lins",
+            "period": "fev. 2021 – dez. 2023"
+        }
+    ],
+    "competencies": ["Laravel", "Vue.js", "GitFlow", "Docker", "MySQL", "Desenvolvimento Full Stack"]
+}

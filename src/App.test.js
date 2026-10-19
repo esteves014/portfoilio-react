@@ -12,6 +12,6 @@ beforeAll(() => {
 
 test('renders portfolio sections', () => {
   render(<App />);
-  expect(screen.getByRole('heading', { name: /about me/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /sobre mim/i })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: /projetos/i })).toBeInTheDocument();
 });

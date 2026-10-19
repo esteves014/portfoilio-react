@@ -19,28 +19,28 @@ const NavBar = ({ scrollToSection, homeRef, aboutRef, qualifyRef, habilityRef, p
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             <button className="nav-link btn btn-link text-white" onClick={() => scrollToSection(homeRef)}>
-                                Home
+                                Início
                             </button>
                         </li>
                         <li className="nav-item">
                             <button className="nav-link btn btn-link text-white" onClick={() => scrollToSection(aboutRef)}>
-                                About Me
+                                Sobre mim
                             </button>
                         </li>
 
                         <li className="nav-item">
                             <button className="nav-link btn btn-link text-white" onClick={() => scrollToSection(qualifyRef)}>
-                                Qualifications
+                                Qualificações
                             </button>
                         </li>
                         <li className="nav-item">
                             <button className="nav-link btn btn-link text-white" onClick={() => scrollToSection(habilityRef)}>
-                                Skills
+                                Habilidades
                             </button>
                         </li>
                         <li className="nav-item">
                             <button className="nav-link btn btn-link text-white" onClick={() => scrollToSection(projectRef)}>
-                                Projects
+                                Projetos
                             </button>
                         </li>
                     </ul>
