@@ -6,7 +6,7 @@ import habilitys from './../data/Habilitys.json'
 const SectionProject = forwardRef((props, ref) => {
     return (
         <section id="project" ref={ref} className="container hidden section-project">
-            <SectionTitle number="04" eyebrow="Portfólio" title="Projetos" subtitle="Alguns dos trabalhos que desenvolvi." />
+            <SectionTitle title="Projetos" subtitle="Alguns dos trabalhos que desenvolvi." />
 
             <div className='row g-4'>
 

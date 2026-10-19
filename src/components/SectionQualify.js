@@ -12,7 +12,7 @@ const SectionQualify = forwardRef((props, ref) => {
 
     return (
         <section id="qualify" ref={ref} className="container hidden section-qualify">
-            <SectionTitle number="02" eyebrow="Trajetória" title="Qualificações" subtitle="Minha experiência profissional e formação acadêmica." />
+            <SectionTitle title="Qualificações" subtitle="Minha experiência profissional e formação acadêmica." />
 
             <div className="qualify-tabs" role="tablist">
                 {tabs.map(tab => (

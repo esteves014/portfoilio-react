@@ -6,18 +6,19 @@ const links = [
     { key: 'qualify', label: 'Qualificações' },
     { key: 'hability', label: 'Habilidades' },
     { key: 'project', label: 'Projetos' },
+    { key: 'contact', label: 'Contato' },
 ]
 
-const NavBar = ({ scrollToSection, homeRef, aboutRef, qualifyRef, habilityRef, projectRef }) => {
+const NavBar = ({ scrollToSection, homeRef, aboutRef, qualifyRef, habilityRef, projectRef, contactRef }) => {
     const [open, setOpen] = useState(false)
     const [active, setActive] = useState('home')
     const [scrolled, setScrolled] = useState(false)
 
-    const refs = { home: homeRef, about: aboutRef, qualify: qualifyRef, hability: habilityRef, project: projectRef }
+    const refs = { home: homeRef, about: aboutRef, qualify: qualifyRef, hability: habilityRef, project: projectRef, contact: contactRef }
 
     useEffect(() => {
         const sections = [
-            ['home', homeRef], ['about', aboutRef], ['qualify', qualifyRef], ['hability', habilityRef], ['project', projectRef],
+            ['home', homeRef], ['about', aboutRef], ['qualify', qualifyRef], ['hability', habilityRef], ['project', projectRef], ['contact', contactRef],
         ]
 
         const handleScroll = () => {
@@ -26,6 +27,10 @@ const NavBar = ({ scrollToSection, homeRef, aboutRef, qualifyRef, habilityRef, p
             sections.forEach(([key, ref]) => {
                 if (ref.current && ref.current.offsetTop <= position) current = key
             })
+            // A última seção é mais baixa que a tela: no fim da página ela é a ativa
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+                current = sections[sections.length - 1][0]
+            }
             setActive(current)
             setScrolled(window.scrollY > 10)
         }
@@ -33,7 +38,7 @@ const NavBar = ({ scrollToSection, homeRef, aboutRef, qualifyRef, habilityRef, p
         handleScroll()
         window.addEventListener('scroll', handleScroll, { passive: true })
         return () => window.removeEventListener('scroll', handleScroll)
-    }, [homeRef, aboutRef, qualifyRef, habilityRef, projectRef])
+    }, [homeRef, aboutRef, qualifyRef, habilityRef, projectRef, contactRef])
 
     useEffect(() => {
         if (!open) return

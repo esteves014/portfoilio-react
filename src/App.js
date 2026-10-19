@@ -5,7 +5,9 @@ import SectionAbout from './components/SectionAbout';
 import SectionHability from './components/SectionHability';
 import SectionProject from './components/SectionProject';
 import SectionQualify from './components/SectionQualify';
+import SectionContact from './components/SectionContact';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 function App() {
   const homeRef = useRef(null);
@@ -13,7 +15,7 @@ function App() {
   const habilityRef = useRef(null);
   const projectRef = useRef(null);
   const qualifyRef = useRef(null);
-  
+  const contactRef = useRef(null);
 
   const scrollToSection = (elementRef) => {
     window.scrollTo({
@@ -63,6 +65,7 @@ function App() {
         habilityRef={habilityRef}
         projectRef={projectRef}
         qualifyRef={qualifyRef}
+        contactRef={contactRef}
       />
 
       <main style={{ marginTop: '80px' }}>
@@ -75,7 +78,10 @@ function App() {
         <SectionQualify ref={qualifyRef} />
         <SectionHability ref={habilityRef} />
         <SectionProject ref={projectRef} />
+        <SectionContact ref={contactRef} />
       </main>
+
+      <Footer onBackToTop={() => scrollToSection(homeRef)} />
     </>
   );
 }

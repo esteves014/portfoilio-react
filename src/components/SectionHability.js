@@ -6,7 +6,7 @@ const SectionHability = forwardRef((props, ref) => {
 
     return (
         <section id="hability" ref={ref} className="container hidden section-hability">
-            <SectionTitle number="03" eyebrow="Tecnologias" title="Habilidades" subtitle="Linguagens, frameworks e ferramentas que uso no dia a dia." />
+            <SectionTitle title="Habilidades" subtitle="Linguagens, frameworks e ferramentas que uso no dia a dia." />
             <div className='row g-4'>
 
                 {habilitys.map((hability, index) => (

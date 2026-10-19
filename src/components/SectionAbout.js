@@ -20,7 +20,7 @@ const SectionAbout = forwardRef((props, ref) => {
                 </div>
 
                 <div className="col-md-7 hidden text-white">
-                    <SectionTitle number="01" eyebrow="Quem sou" title="Sobre mim" />
+                    <SectionTitle title="Sobre mim" />
 
                     <p className="about-lead">
                         Olá, sou o <strong>Vitor Miguel</strong>, desenvolvedor web Full Stack e estudante de
