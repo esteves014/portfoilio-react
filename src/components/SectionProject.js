@@ -10,28 +10,34 @@ const SectionProject = forwardRef((props, ref) => {
                 <div className="effect-gradient"></div>
             </div>
 
-            <div className='g-5'>
+            <div className='row g-4'>
 
                 {projects.map((project, index) => (
-                    <div key={index} className='col-lg-4 col-sm-12 col-md-6'>
-                        <div className="project-card p-3 rounded d-flex align-items-start gap-3">
-                            <img alt="" src={project.img} className='project-thumb' onError={(e)=>{e.target.onerror=null;e.target.src='/img/logo/vitor.png'}} />
-                            <div className='project-info'>
-                                <h5 className='mb-1 text-white'>{project.name}</h5>
-                                <div className='d-flex gap-2 align-items-center mt-2'>
+                    <div key={index} className='col-12 col-md-6 col-lg-4'>
+                        <article className="project-card h-100 d-flex flex-column">
+                            <div className='project-thumb-wrapper'>
+                                <img alt={project.name} src={project.img} className='project-thumb' onError={(e)=>{e.target.onerror=null;e.target.src='/img/logo/vitor.png'}} />
+                            </div>
+                            <div className='project-info p-4 d-flex flex-column flex-grow-1'>
+                                <h2 className='h5 mb-3'>{project.name}</h2>
+                                <div className='d-flex flex-wrap gap-2 mt-auto'>
                                     {(project.skills || []).map((skillAcr, i) => {
                                         const skill = habilitys.find(h => h.acronym === skillAcr)
-                                        const bg = skill ? skill.backgroun : 'rgb(60,60,60)'
-                                        const color = skill ? skill.color : '#fff'
+                                        const color = skill ? skill.color : 'rgb(140,140,140)'
                                         return (
-                                            <div key={i} className='skill-badge d-inline-flex align-items-center justify-content-center'>
-                                                <span style={{ background: bg, color: color }} className='rounded-circle badge-icon'>{skillAcr}</span>
-                                            </div>
+                                            <span key={i} className='skill-tag' style={{ '--skill-color': color }}>
+                                                {skill ? skill.name : skillAcr}
+                                            </span>
                                         )
                                     })}
                                 </div>
+                                {project.link && (
+                                    <a href={project.link} target='_blank' rel='noopener noreferrer' className='btn btn-outline text-white mt-4 align-self-start'>
+                                        Ver projeto <i className="bi bi-box-arrow-up-right ms-1"></i>
+                                    </a>
+                                )}
                             </div>
-                        </div>
+                        </article>
                     </div>
                 ))}
             </div >

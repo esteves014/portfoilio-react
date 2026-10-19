@@ -34,7 +34,7 @@
     {
         "acronym": "LR",
         "name": "Laravel",
-        "description": "LAravel é uma biblioteca de Backend que cuida das manipulações diretas de dados.",
+        "description": "Framework PHP para back-end, com rotas, ORM, autenticação e filas prontos para uso.",
         "backgroun": "rgb(96,0,0)",
         "color": "rgb(182,0,0)",
         "level_hability": 6
@@ -42,7 +42,7 @@
     {
         "acronym": "BT",
         "name": "Bootstrap",
-        "description": "LAravel é uma biblioteca de Backend que cuida das manipulações diretas de dados.",
+        "description": "Framework CSS com grid responsivo e componentes prontos para criar interfaces rapidamente.",
         "backgroun": "rgb(40,0,96)",
         "color": "rgb(85,0,182)",
         "level_hability": 8
@@ -50,7 +50,7 @@
     {
         "acronym": "VJ",
         "name": "Vue.js",
-        "description": "Laravel é uma biblioteca de Backend que cuida das manipulações diretas de dados.",
+        "description": "Framework JavaScript progressivo para construir interfaces reativas baseadas em componentes.",
         "backgroun": "rgb(0,96,72)",
         "color": "rgb(0,182,161)",
         "level_hability": 6

@@ -25,7 +25,7 @@ const SectionAbout = forwardRef((props, ref) => {
                     </p>
 
                     <a href="/archives/vitor_esteves_cv.pdf" className='text-decoration-none' download="vitor_esteves_cv.pdf">
-                        <button className='btn-download text-white px-5 py-2 align-items-center justify-content-center d-flex gap-2 text-center'>Baixar CV <i class="bi bi-cloud-arrow-down fs-5"></i></button>
+                        <button className='btn-download text-white px-5 py-2 align-items-center justify-content-center d-flex gap-2 text-center'>Baixar CV <i className="bi bi-cloud-arrow-down fs-5"></i></button>
                     </a>
                 </div>
             </div>

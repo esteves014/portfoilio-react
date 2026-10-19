@@ -316,101 +316,118 @@ section {
 }
 
 /* Section hability */
-
-.container-hability {
-  background-color: rgb(24, 24, 24);
-  transition: 0.2s ease-in-out;
-}
-
-.container-hability:hover {
-  transform: scale(1.1);
-}
-
-.title-hability {
-  text-align: center;
-  height: auto;
-}
-
-.level_hability {
-  border: 2px solid transparent;
-  border-radius: 15px;
-  background:
-    linear-gradient(#1e1e1e, #1e1e1e) padding-box,
-    linear-gradient(to right, var(--primary), var(--primary-2), var(--accent)) border-box;
-}
-
-/* Project cards */
+.section-hability,
 .section-project {
   display: block;
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
 }
 
-.project-card {
-  background: rgba(12,10,16,0.6);
-  border: 1px solid rgba(146,0,190,0.12);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-  display: flex;
-  align-items: center;
+.skill-card {
+  background: rgba(12, 10, 16, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--skill-color);
+  box-shadow: 0 16px 40px -12px var(--skill-color);
+}
+
+.skill-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: var(--skill-bg);
+  border: 1px solid var(--skill-color);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.skill-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.skill-level-label {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+}
+
+.skill-level {
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.skill-level-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--skill-color);
+}
+
+/* Project cards */
+.project-card {
+  background: rgba(12, 10, 16, 0.75);
+  border: 1px solid rgba(146, 0, 190, 0.18);
+  border-radius: 16px;
+  overflow: hidden;
+  color: var(--text);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(53,0,139,0.12);
+  border-color: var(--border);
+  box-shadow: var(--shadow-2);
+}
+
+.project-thumb-wrapper {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .project-thumb {
-  width: auto;
-  height: 300px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
   display: block;
-  background: rgba(255,255,255,0.02);
-  padding: 14px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.07);
-  box-sizing: border-box;
-  flex-shrink: 0;
+  transition: transform 0.4s ease;
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
-  .project-thumb {
-    width: 140px;
-    height: 140px;
-  }
+.project-card:hover .project-thumb {
+  transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-  .project-card {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .project-thumb {
-    width: 100%;
-    height: auto;
-    padding: 10px;
-  }
-  .project-info {
-    margin-top: 0.75rem;
-  }
-}
-
-.skill-badge .badge-icon {
+.skill-tag {
   display: inline-flex;
-  width: 28px;
-  height: 28px;
   align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: 700;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.8rem;
+}
+
+.skill-tag::before {
+  content: '';
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-}
-
-/* Make sure project texts are visible even when parent styles conflict */
-.project-card,
-.project-card * {
-  color: var(--text) !important;
-}
-
-.project-card .project-info {
-  min-width: 0;
-  flex: 1 1 auto;
+  background: var(--skill-color);
 }

@@ -35,15 +35,18 @@ const SectionHome = forwardRef((props, ref) => {
             `;
         };
 
-        buttons.forEach(button => {
-            button.addEventListener('mousemove', (e) => handleMouseMove(e, button));
-            button.addEventListener('mouseleave', () => handleMouseLeave(button));
+        const listeners = Array.from(buttons).map(button => {
+            const onMouseMove = (e) => handleMouseMove(e, button);
+            const onMouseLeave = () => handleMouseLeave(button);
+            button.addEventListener('mousemove', onMouseMove);
+            button.addEventListener('mouseleave', onMouseLeave);
+            return { button, onMouseMove, onMouseLeave };
         });
 
         return () => {
-            buttons.forEach(button => {
-                button.removeEventListener('mousemove', (e) => handleMouseMove(e, button));
-                button.removeEventListener('mouseleave', () => handleMouseLeave(button));
+            listeners.forEach(({ button, onMouseMove, onMouseLeave }) => {
+                button.removeEventListener('mousemove', onMouseMove);
+                button.removeEventListener('mouseleave', onMouseLeave);
             });
         };
     }, []);

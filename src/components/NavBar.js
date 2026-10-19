@@ -35,7 +35,7 @@ const NavBar = ({ scrollToSection, homeRef, aboutRef, qualifyRef, habilityRef, p
                         </li>
                         <li className="nav-item">
                             <button className="nav-link btn btn-link text-white" onClick={() => scrollToSection(habilityRef)}>
-                                Hability
+                                Skills
                             </button>
                         </li>
                         <li className="nav-item">
