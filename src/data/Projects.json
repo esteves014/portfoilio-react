@@ -1,17 +1,58 @@
 [
     {
-        "img": "/img/img-projetos/der.png",
-        "name": "DER",
-        "skills": ["LR", "JS"]
+        "semester": 1,
+        "discipline": "Padrões de Projeto de Sítios Internet",
+        "name": "Mirror Fashion",
+        "description": "Loja virtual de moda com as páginas Home e Sobre, criada com HTML5 e CSS3.",
+        "img": "/img/img-projetos/mirrorfashion.png",
+        "skills": ["HTML", "CSS"]
     },
     {
-        "img": "/img/img-projetos/estevesgrupo.png",
+        "semester": 2,
+        "discipline": "Padrões de Projeto de Sítios Internet II",
+        "name": "Portfólio digital",
+        "description": "Evolução do portfólio para uma aplicação React componentizada e responsiva com Bootstrap.",
+        "img": "/img/img-projetos/portfolio.png",
+        "skills": ["RC", "BT"]
+    },
+    {
+        "semester": 3,
+        "discipline": "Banco de Dados e Internet",
+        "name": "DER",
+        "description": "Modelagem entidade-relacionamento de um sistema de empréstimo de livros.",
+        "img": "/img/img-projetos/der.png",
+        "skills": ["MySQL"]
+    },
+    {
+        "semester": 4,
+        "discipline": "Desenvolvimento para Servidores",
+        "name": "Controle de estoque e fornecedores",
+        "description": "Sistema CRUD em PHP e MySQL para cadastro de produtos e fornecedores, com sanitização das entradas.",
+        "skills": ["PHP", "MySQL"]
+    },
+    {
+        "semester": 5,
+        "discipline": "Desenvolvimento para Dispositivos Móveis I",
+        "name": "Food Express",
+        "description": "Aplicativo Flutter de pedidos de comida, com restaurantes, cardápios, carrinho e finalização do pedido.",
+        "skills": ["FL"]
+    },
+    {
+        "semester": 6,
+        "discipline": "Desenvolvimento para Dispositivos Móveis II",
+        "name": "minhaCidade",
+        "description": "Aplicativo Android em Java com vagas de emprego, notícias de jornais locais e denúncias à prefeitura.",
+        "status": "Em desenvolvimento",
+        "skills": ["JV", "Android"]
+    },
+    {
         "name": "Esteves Grupo",
+        "img": "/img/img-projetos/estevesgrupo.png",
         "skills": ["VJ", "BT"]
     },
     {
-        "img": "/img/img-projetos/letsgocarretas.png",
         "name": "Let's go carretas",
+        "img": "/img/img-projetos/letsgocarretas.png",
         "skills": ["HTML", "CSS", "JS"]
     }
 ]

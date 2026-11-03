@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
+const FATEC_URL = 'https://www.fateclins.edu.br'
+const CV_URL = '/archives/vitor_esteves_cv.pdf'
+
 const links = [
     { key: 'home', label: 'Início' },
     { key: 'about', label: 'Sobre mim' },
@@ -96,6 +99,18 @@ const NavBar = ({ scrollToSection, homeRef, aboutRef, qualifyRef, habilityRef, p
                                     </button>
                                 </li>
                             ))}
+                            <li className="nav-item nav-item-external">
+                                <a className="nav-link" href={CV_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>
+                                    <span className="nav-index d-lg-none"><i className="bi bi-box-arrow-up-right"></i></span>
+                                    Curriculum <i className="bi bi-box-arrow-up-right nav-external-icon d-none d-lg-inline"></i>
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href={FATEC_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>
+                                    <span className="nav-index d-lg-none"><i className="bi bi-box-arrow-up-right"></i></span>
+                                    FATEC <i className="bi bi-box-arrow-up-right nav-external-icon d-none d-lg-inline"></i>
+                                </a>
+                            </li>
                         </ul>
 
                         <a

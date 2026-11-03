@@ -58,6 +58,10 @@ const SectionHome = forwardRef(({ onViewProjects, onScrollDown }, ref) => {
             <div className="home-glow home-glow-2" aria-hidden="true"></div>
 
             <div className="home-content text-center position-relative">
+                <a href="https://www.fateclins.edu.br" target="_blank" rel="noopener noreferrer" className="home-fatec" title="Site da Fatec Lins">
+                    <img src="/img/logo/fatec-lins.png" alt="Logo da Fatec Lins - Faculdade de Tecnologia de Lins Prof. Antonio Seabra" width="96" height="64" />
+                </a>
+
                 <span className="home-badge">
                     <span className="home-badge-dot"></span> Desenvolvedor Full Stack
                 </span>
@@ -65,6 +69,11 @@ const SectionHome = forwardRef(({ onViewProjects, onScrollDown }, ref) => {
                 <h1 className="home-title">
                     Olá, eu sou <span className="span-home">Vitor Miguel</span>
                 </h1>
+
+                <p className="home-fullname">
+                    Vitor Miguel da Silva Esteves
+                    <span>Tecnologia em Sistemas para Internet · Fatec Lins</span>
+                </p>
 
                 <p className="home-lead">
                     Crio sistemas e aplicações web de ponta a ponta com Laravel, Vue.js, PHP e MySQL,

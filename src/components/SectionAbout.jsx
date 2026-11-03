@@ -6,7 +6,7 @@ import projects from './../data/Projects.json'
 const highlights = [
     { value: '2+', label: 'anos de experiência em desenvolvimento web' },
     { value: qualifications.experience.length, label: 'experiências profissionais' },
-    { value: projects.length, label: 'projetos em destaque' },
+    { value: projects.length, label: 'projetos no portfólio' },
 ]
 
 const SectionAbout = forwardRef((props, ref) => {
