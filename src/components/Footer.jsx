@@ -1,11 +1,13 @@
 import React from 'react'
 import socials from './../data/Socials.json'
 
+const currentYear = new Date().getFullYear()
+
 const Footer = ({ onBackToTop }) => {
     return (
         <footer className="site-footer">
             <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
-                <span className="footer-text">© {new Date().getFullYear()} Vitor Miguel. Todos os direitos reservados.</span>
+                <span className="footer-text">© {currentYear} Vitor Miguel. Todos os direitos reservados.</span>
 
                 <div className="d-flex align-items-center gap-2">
                     {socials.filter(social => social.url).map(social => (
