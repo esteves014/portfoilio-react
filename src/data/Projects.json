@@ -5,7 +5,10 @@
         "name": "Mirror Fashion",
         "description": "Loja virtual de moda com as páginas Home e Sobre, criada com HTML5 e CSS3.",
         "img": "/img/img-projetos/mirrorfashion.png",
-        "skills": ["HTML", "CSS"]
+        "skills": [
+            "HTML",
+            "CSS"
+        ]
     },
     {
         "semester": 2,
@@ -13,7 +16,10 @@
         "name": "Portfólio digital",
         "description": "Evolução do portfólio para uma aplicação React componentizada e responsiva com Bootstrap.",
         "img": "/img/img-projetos/portfolio.png",
-        "skills": ["RC", "BT"]
+        "skills": [
+            "RC",
+            "BT"
+        ]
     },
     {
         "semester": 3,
@@ -21,38 +27,61 @@
         "name": "DER",
         "description": "Modelagem entidade-relacionamento de um sistema de empréstimo de livros.",
         "img": "/img/img-projetos/der.png",
-        "skills": ["MySQL"]
+        "skills": [
+            "MY"
+        ]
     },
     {
         "semester": 4,
         "discipline": "Desenvolvimento para Servidores",
         "name": "Controle de estoque e fornecedores",
-        "description": "Sistema CRUD em PHP e MySQL para cadastro de produtos e fornecedores, com sanitização das entradas.",
-        "skills": ["PHP", "MySQL"]
+        "description": "Sistema CRUD em PHP e MySQL para cadastro de produtos e fornecedores, com validação dos dados, sanitização das entradas e confirmação antes de excluir.",
+        "skills": [
+            "PHP",
+            "MY",
+            "BT"
+        ],
+        "img": "/img/img-projetos/estoque.png",
+        "link": "https://github.com/esteves014/CRUD-Produto"
     },
     {
         "semester": 5,
         "discipline": "Desenvolvimento para Dispositivos Móveis I",
         "name": "Food Express",
-        "description": "Aplicativo Flutter de pedidos de comida, com restaurantes, cardápios, carrinho e finalização do pedido.",
-        "skills": ["FL"]
+        "description": "Aplicativo Flutter de pedidos de comida, com lista de restaurantes, identificação da cidade por geolocalização, cardápios, carrinho e finalização do pedido.",
+        "skills": [
+            "FL"
+        ],
+        "img": "/img/img-projetos/foodexpress.png"
     },
     {
         "semester": 6,
         "discipline": "Desenvolvimento para Dispositivos Móveis II",
         "name": "minhaCidade",
-        "description": "Aplicativo Android em Java com vagas de emprego, notícias de jornais locais e denúncias à prefeitura.",
+        "description": "Aplicativo Android em Java que reúne vagas de emprego, notícias dos jornais locais e denúncias de problemas urbanos à prefeitura, com protocolo, local no mapa (OpenStreetMap) e acompanhamento do status. Trabalho acadêmico voltado aos Objetivos de Desenvolvimento Sustentável (ODS 8, 11 e 16).",
+        "img": "/img/img-projetos/minhacidade.png",
         "status": "Em desenvolvimento",
-        "skills": ["JV", "Android"]
+        "skills": [
+            "JV",
+            "AN",
+            "SQLite"
+        ]
     },
     {
         "name": "Esteves Grupo",
         "img": "/img/img-projetos/estevesgrupo.png",
-        "skills": ["VJ", "BT"]
+        "skills": [
+            "VJ",
+            "BT"
+        ]
     },
     {
         "name": "Let's go carretas",
         "img": "/img/img-projetos/letsgocarretas.png",
-        "skills": ["HTML", "CSS", "JS"]
+        "skills": [
+            "HTML",
+            "CSS",
+            "JS"
+        ]
     }
 ]
