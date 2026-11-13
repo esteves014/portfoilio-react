@@ -83,5 +83,15 @@
             "CSS",
             "JS"
         ]
+    },
+    {
+        "name": "BMR Garage",
+        "description": "Catálogo online de veículos seminovos feito para uma loja de carros, com busca, filtros, destaques e painel administrativo para a loja cadastrar os carros. Projeto de cliente, desenvolvido fora do curso.",
+        "img": "/img/img-projetos/bmrgarage.png",
+        "skills": [
+            "RC",
+            "Next.js",
+            "Supabase"
+        ]
     }
 ]
