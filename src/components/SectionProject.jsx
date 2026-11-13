@@ -73,6 +73,9 @@ const SectionProject = forwardRef((props, ref) => {
                         <span className="semester-badge">Extras</span>
                         <span className="semester-discipline">Outros trabalhos</span>
                     </h3>
+                    <p className="semester-caption">
+                        Trabalhos feitos fora das disciplinas do curso, como sites para clientes. Por pertencerem aos seus donos, não têm link de acesso.
+                    </p>
                     <div className='row g-4'>
                         {otherProjects.map(project => (
                             <div key={project.name} className='col-12 col-md-6 col-lg-4'>

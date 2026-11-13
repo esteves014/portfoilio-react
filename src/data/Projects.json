@@ -8,8 +8,7 @@
         "skills": [
             "HTML",
             "CSS"
-        ],
-        "link": "https://github.com/esteves014/mirrorfashion"
+        ]
     },
     {
         "semester": 2,
@@ -20,8 +19,7 @@
         "skills": [
             "RC",
             "BT"
-        ],
-        "link": "https://github.com/esteves014/portfoilio-react"
+        ]
     },
     {
         "semester": 3,
@@ -43,8 +41,7 @@
             "MY",
             "BT"
         ],
-        "img": "/img/img-projetos/estoque.png",
-        "link": "https://github.com/esteves014/CRUD-Produto"
+        "img": "/img/img-projetos/estoque.png"
     },
     {
         "semester": 5,
