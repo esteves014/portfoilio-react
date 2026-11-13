@@ -72,7 +72,8 @@
         "skills": [
             "VJ",
             "BT"
-        ]
+        ],
+        "description": "Site institucional de uma empresa, com apresentação da empresa, serviços, notícias, contato e área de acesso, desenvolvido com Vue.js e Bootstrap. Projeto de cliente, desenvolvido fora do curso."
     },
     {
         "name": "Let's go carretas",
@@ -81,7 +82,8 @@
             "HTML",
             "CSS",
             "JS"
-        ]
+        ],
+        "description": "Site institucional de uma empresa de transporte e locação, com apresentação, serviços e contato, feito com HTML, CSS e JavaScript. Projeto de cliente, desenvolvido fora do curso."
     },
     {
         "name": "BMR Garage",
