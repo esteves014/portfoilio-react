@@ -73,7 +73,7 @@
             "VJ",
             "BT"
         ],
-        "description": "Site institucional de uma empresa, com apresentação da empresa, serviços, notícias, contato e área de acesso, desenvolvido com Vue.js e Bootstrap. Projeto de cliente, desenvolvido fora do curso."
+        "description": "Site institucional de um escritório de contabilidade, com apresentação da empresa, serviços (fiscal, trabalhista, assessoria e consultoria), princípios, notícias e contato, desenvolvido com Vue.js e Bootstrap. Projeto de cliente, desenvolvido fora do curso."
     },
     {
         "name": "Let's go carretas",
@@ -83,7 +83,7 @@
             "CSS",
             "JS"
         ],
-        "description": "Site institucional de uma empresa de transporte e locação, com apresentação, serviços e contato, feito com HTML, CSS e JavaScript. Projeto de cliente, desenvolvido fora do curso."
+        "description": "Site de uma empresa de locação de carretas para transporte de jet skis, com os serviços Take Use e Take and Back, pontos de retirada e devolução e contato, feito com HTML, CSS e JavaScript. Projeto de cliente, desenvolvido fora do curso."
     },
     {
         "name": "BMR Garage",
