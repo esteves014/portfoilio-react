@@ -8,7 +8,8 @@
         "skills": [
             "HTML",
             "CSS"
-        ]
+        ],
+        "link": "https://github.com/esteves014/mirrorfashion"
     },
     {
         "semester": 2,
@@ -19,7 +20,8 @@
         "skills": [
             "RC",
             "BT"
-        ]
+        ],
+        "link": "https://github.com/esteves014/portfoilio-react"
     },
     {
         "semester": 3,
