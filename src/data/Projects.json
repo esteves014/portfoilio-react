@@ -8,6 +8,52 @@
         "skills": [
             "HTML",
             "CSS"
+        ],
+        "slug": "mirror-fashion",
+        "about": [
+            "Primeiro projeto do curso: o exemplo de uma tela de loja virtual de moda, feito no início da faculdade na disciplina de Padrões de Projeto de Sítios Internet. O site tem duas páginas, a Home (vitrine da loja) e a página Sobre, escritas apenas com HTML e CSS, sem JavaScript.",
+            "O exercício era traduzir um layout pronto em código, cuidando da estrutura do HTML, da organização dos arquivos de estilo e do posicionamento dos elementos na página."
+        ],
+        "highlights": [
+            {
+                "value": "2",
+                "label": "páginas (Home e Sobre)"
+            },
+            {
+                "value": "4",
+                "label": "arquivos de CSS"
+            },
+            {
+                "value": "22",
+                "label": "imagens usadas"
+            }
+        ],
+        "features": [
+            "Home com cabeçalho, menu de navegação, vitrines de produtos e rodapé",
+            "Página Sobre com a apresentação da empresa",
+            "Textos do site mantidos em arquivos separados (introdução, produto, diferenciais e sobre)"
+        ],
+        "implementation": [
+            {
+                "title": "Estrutura semântica",
+                "text": "A Home usa as tags header, nav, main, section e footer para separar o cabeçalho, o menu, o conteúdo e o rodapé."
+            },
+            {
+                "title": "CSS dividido por página",
+                "text": "reset.css zera os estilos padrão do navegador, index.css guarda as variáveis de cor (custom properties) e o estilo base, e home.module.css e sobre.module.css cuidam de cada página."
+            },
+            {
+                "title": "Layout com Flexbox e float",
+                "text": "A Home organiza os blocos com Flexbox. A página Sobre combina float, Flexbox e uma media query."
+            },
+            {
+                "title": "Imagens pelo CSS",
+                "text": "Parte das imagens decorativas entra por background-image no CSS, o que mantém o HTML mais limpo."
+            }
+        ],
+        "limits": [
+            "A Home não tem media queries; a adaptação a telas menores foi tratada só na página Sobre.",
+            "O site é estático: não há carrinho, busca nem integração com banco de dados."
         ]
     },
     {
@@ -19,6 +65,53 @@
         "skills": [
             "RC",
             "BT"
+        ],
+        "slug": "portfolio-digital",
+        "about": [
+            "Segundo projeto do curso: a evolução do portfólio em HTML para uma aplicação React. A página foi dividida em componentes, um para cada seção, e o conteúdo deixou de ficar escrito dentro do código: projetos, habilidades, qualificações, contatos e redes sociais ficam em arquivos JSON.",
+            "O visual segue um tema escuro com roxo, fonte Jost e componentes do Bootstrap, e a página se adapta de celulares a telas grandes."
+        ],
+        "highlights": [
+            {
+                "value": "6",
+                "label": "seções na página"
+            },
+            {
+                "value": "5",
+                "label": "arquivos de dados em JSON"
+            },
+            {
+                "value": "React 19",
+                "label": "com Vite e Bootstrap 5"
+            }
+        ],
+        "features": [
+            "Menu fixo que destaca a seção visível e vira menu lateral no celular",
+            "Seções de início, sobre mim, qualificações, habilidades, projetos e contato",
+            "Projetos agrupados por semestre, cada um com página de detalhes",
+            "Animação de entrada das seções conforme a rolagem da página",
+            "Download do currículo em PDF"
+        ],
+        "implementation": [
+            {
+                "title": "Componentes por seção",
+                "text": "SectionHome, SectionAbout, SectionQualify, SectionHability, SectionProject e SectionContact, além de NavBar, Footer e componentes pequenos reutilizados, como as tags de tecnologia."
+            },
+            {
+                "title": "Dados em JSON",
+                "text": "Para adicionar um projeto ou uma habilidade basta editar o arquivo correspondente, sem mexer nos componentes."
+            },
+            {
+                "title": "Responsividade",
+                "text": "Grid e utilitários do Bootstrap, com ajustes em CSS próprio para menu, cards e animações."
+            },
+            {
+                "title": "Qualidade e publicação",
+                "text": "Testes automatizados com Vitest, lint com oxlint e publicação na Vercel a partir da pasta dist gerada pelo Vite."
+            }
+        ],
+        "limits": [
+            "As páginas de detalhes dos projetos usam rotas por hash (#/projeto/...), sem biblioteca de roteamento."
         ]
     },
     {
@@ -29,6 +122,20 @@
         "img": "/img/img-projetos/der.png",
         "skills": [
             "MY"
+        ],
+        "slug": "der",
+        "about": [
+            "Terceiro projeto do curso, da disciplina de Banco de Dados e Internet: a modelagem de um banco de dados para um sistema de empréstimo de livros. O Diagrama Entidade-Relacionamento (DER) mostra as entidades do sistema, seus atributos e como elas se relacionam, e serviu de base para criar as tabelas no MySQL."
+        ],
+        "implementation": [
+            {
+                "title": "Entidades e relacionamentos",
+                "text": "Identificação das entidades do sistema e de como elas se relacionam entre si."
+            },
+            {
+                "title": "Chaves e cardinalidades",
+                "text": "Definição das chaves primárias e estrangeiras e das cardinalidades de cada relacionamento."
+            }
         ]
     },
     {
@@ -41,7 +148,58 @@
             "MY",
             "BT"
         ],
-        "img": "/img/img-projetos/estoque.png"
+        "img": "/img/img-projetos/estoque.png",
+        "slug": "controle-de-estoque",
+        "about": [
+            "Quarto projeto do curso, da disciplina de Desenvolvimento para Servidores: um sistema web em PHP com MySQL para cadastrar e gerenciar produtos. Foi construído seguindo o padrão MVC, com cada parte do código em uma camada: o controlador recebe a requisição, o DAO conversa com o banco e a view mostra o resultado.",
+            "O foco do trabalho foi a segurança e a confiabilidade do CRUD: os dados dos formulários são validados e limpos antes de chegar ao banco e nenhuma exclusão acontece sem confirmação."
+        ],
+        "highlights": [
+            {
+                "value": "MVC",
+                "label": "com PHP orientado a objetos"
+            },
+            {
+                "value": "PDO",
+                "label": "consultas preparadas"
+            },
+            {
+                "value": "3",
+                "label": "páginas de erro (401, 404 e 500)"
+            }
+        ],
+        "features": [
+            "Cadastrar, listar, editar e excluir produtos (nome, preço, quantidade e descrição)",
+            "Cadastrar, listar, editar e excluir usuários do sistema",
+            "Tela de confirmação antes de excluir um registro",
+            "Mensagens de sucesso e de erro mostradas ao usuário, com os campos inválidos destacados",
+            "Páginas próprias para os erros 401, 404 e 500"
+        ],
+        "implementation": [
+            {
+                "title": "Arquitetura MVC",
+                "text": "Pastas separadas para Controllers, Models (entidades e DAOs), Views e Lib. Uma classe App recebe a URL (com .htaccess redirecionando tudo para o Index.php) e chama o controlador e a ação certos."
+            },
+            {
+                "title": "DAO com PDO",
+                "text": "Uma BaseDAO concentra insert, update, delete e select, e as consultas de escrita usam prepared statements, com os valores enviados separados do SQL."
+            },
+            {
+                "title": "Validação e sanitização",
+                "text": "A classe Util remove tags HTML, barras e espaços dos dados recebidos, e o controlador confere os campos obrigatórios (como o preço) antes de gravar."
+            },
+            {
+                "title": "Sessão e mensagens",
+                "text": "Uma classe Sessao guarda os avisos de sucesso e de erro entre uma página e outra."
+            },
+            {
+                "title": "Autoload e interface",
+                "text": "Composer com autoload PSR-4 para carregar as classes, e Bootstrap com Font Awesome nas telas."
+            }
+        ],
+        "limits": [
+            "A consulta por id na listagem ainda monta o SQL por concatenação; o ideal é passá-la também por prepared statement."
+        ]
     },
     {
         "semester": 5,
@@ -51,7 +209,53 @@
         "skills": [
             "FL"
         ],
-        "img": "/img/img-projetos/foodexpress.png"
+        "img": "/img/img-projetos/foodexpress.png",
+        "slug": "food-express",
+        "about": [
+            "Quinto projeto do curso, da disciplina de Desenvolvimento para Dispositivos Móveis I: um aplicativo de pedidos de comida feito com Flutter. Ao abrir, o app descobre em qual cidade o usuário está, lista os restaurantes, mostra o cardápio de cada um e deixa montar o carrinho e finalizar o pedido."
+        ],
+        "highlights": [
+            {
+                "value": "3",
+                "label": "telas (restaurantes, cardápio e carrinho)"
+            },
+            {
+                "value": "2",
+                "label": "pacotes de localização"
+            },
+            {
+                "value": "Flutter",
+                "label": "com Dart"
+            }
+        ],
+        "features": [
+            "Cidade do usuário identificada pela localização do aparelho",
+            "Lista de restaurantes e tela com o cardápio de cada um",
+            "Adicionar pratos ao carrinho, com aviso na tela",
+            "Carrinho com o valor de cada item, remoção de itens e total do pedido",
+            "Finalização do pedido com confirmação"
+        ],
+        "implementation": [
+            {
+                "title": "Geolocalização",
+                "text": "O pacote geolocator verifica se o serviço de localização está ligado, pede a permissão e obtém a posição. Depois o geocoding converte as coordenadas no nome da cidade."
+            },
+            {
+                "title": "Carregamento resiliente",
+                "text": "A busca da cidade tem tempo limite, guarda o resultado em cache e trata os erros, para a tela não travar quando a localização falha."
+            },
+            {
+                "title": "Navegação entre telas",
+                "text": "Telas separadas para a lista, os detalhes do restaurante e o carrinho, ligadas com Navigator."
+            },
+            {
+                "title": "Estado do carrinho",
+                "text": "Os itens ficam em uma estrutura compartilhada entre as telas e o total é calculado somando os preços."
+            }
+        ],
+        "limits": [
+            "Os restaurantes e os pratos são dados fixos no código; não há servidor nem pagamento de verdade."
+        ]
     },
     {
         "semester": 6,
@@ -64,6 +268,72 @@
             "JV",
             "AN",
             "SQLite"
+        ],
+        "slug": "minha-cidade",
+        "about": [
+            "Sexto projeto do curso, da disciplina de Desenvolvimento para Dispositivos Móveis II: um aplicativo Android nativo, escrito em Java, que reúne em um só lugar três serviços locais, vagas de emprego, notícias de jornais da cidade e denúncias de problemas urbanos à prefeitura.",
+            "A ideia é que a prefeitura contrate o serviço: o cidadão só se cadastra em cidades contratantes e todo o conteúdo é filtrado pela cidade dele. Ele também é desenvolvido como um trabalho científico voltado aos Objetivos de Desenvolvimento Sustentável (ODS 8, 9, 11 e 16), seguindo a abordagem Design Science Research.",
+            "Na versão atual é um protótipo com dados fictícios de três cidades paulistas (Lins, Promissão e Guaiçara), sem avaliação com usuários e sem servidor."
+        ],
+        "highlights": [
+            {
+                "value": "14",
+                "label": "requisitos funcionais"
+            },
+            {
+                "value": "6",
+                "label": "tabelas no SQLite"
+            },
+            {
+                "value": "4",
+                "label": "abas: vagas, notícias, denúncias e perfil"
+            },
+            {
+                "value": "13",
+                "label": "testes unitários sem falhas"
+            }
+        ],
+        "features": [
+            "Cadastro e login por CPF (validado pelos dígitos verificadores) e senha",
+            "Vagas da cidade com busca por cargo, empresa ou bairro e filtro por tipo (CLT, Estágio, Temporário, PJ e Aprendiz)",
+            "Candidatura à vaga por e-mail ou contato por telefone",
+            "Notícias da cidade, filtradas por jornal, com abertura da matéria no site",
+            "Denúncias com categoria, endereço, descrição e foto, que geram um protocolo no formato AAAA-NNNNN",
+            "Acompanhamento do status (Aberta, Em análise e Resolvida) e leitura dos pareceres da prefeitura",
+            "Notificação e selo de não lidos quando a prefeitura responde",
+            "Posição da denúncia pelo GPS ou escolhida no mapa, e mapa com as próprias denúncias"
+        ],
+        "implementation": [
+            {
+                "title": "Arquitetura",
+                "text": "Android nativo em Java (minSdk 26), interface em Material Components e navegação por quatro abas feitas com fragments. A camada de dados segue o contrato de uma futura API: toda consulta recebe o identificador da cidade."
+            },
+            {
+                "title": "Banco local",
+                "text": "SQLite com seis tabelas (cidades, usuários, vagas, notícias, denúncias e pareceres) e chaves estrangeiras ativadas."
+            },
+            {
+                "title": "Mapa e localização",
+                "text": "Mapa com osmdroid e OpenStreetMap, sem chave de API. A posição vem do LocationManager e só é pedida quando o cidadão toca no botão. O endereço legível é obtido pelo Geocoder, fora da thread principal."
+            },
+            {
+                "title": "Ciclo da denúncia",
+                "text": "O parecer da prefeitura grava o parecer e atualiza o status da denúncia na mesma transação, dispara a notificação e marca como lido ao abrir."
+            },
+            {
+                "title": "Segurança e privacidade",
+                "text": "Senhas com PBKDF2-HMAC-SHA256 (100 mil iterações e salt aleatório), CPF mascarado no perfil e permissões de localização e de notificação pedidas sem bloquear o uso."
+            },
+            {
+                "title": "Testes",
+                "text": "Testes unitários para a validação de CPF, os dados iniciais e a formatação de endereços; o fluxo do mapa foi verificado à mão em um emulador Android."
+            }
+        ],
+        "limits": [
+            "Os dados são fictícios e o parecer da prefeitura é simulado por um botão disponível só em builds de depuração.",
+            "Não há servidor: o banco é local ao aparelho e as fotos das denúncias não são compartilhadas.",
+            "O CPF fica guardado sem criptografia no banco local e o uso dos servidores públicos do OpenStreetMap precisa ser trocado em produção.",
+            "Próximos passos: API e painel web para a prefeitura, mapa agregado de demandas, avaliação de usabilidade com usuários e um piloto em uma cidade."
         ]
     },
     {
@@ -73,7 +343,8 @@
             "VJ",
             "BT"
         ],
-        "description": "Site institucional de um escritório de contabilidade, com apresentação da empresa, serviços (fiscal, trabalhista, assessoria e consultoria), princípios, notícias e contato, desenvolvido com Vue.js e Bootstrap. Projeto de cliente, desenvolvido fora do curso."
+        "description": "Site institucional de um escritório de contabilidade, com apresentação da empresa, serviços (fiscal, trabalhista, assessoria e consultoria), princípios, notícias e contato, desenvolvido com Vue.js e Bootstrap. Projeto de cliente, desenvolvido fora do curso.",
+        "slug": "esteves-grupo"
     },
     {
         "name": "Let's go carretas",
@@ -83,9 +354,11 @@
             "CSS",
             "JS"
         ],
-        "description": "Site de uma empresa de locação de carretas para transporte de jet skis, com os serviços Take Use e Take and Back, pontos de retirada e devolução e contato, feito com HTML, CSS e JavaScript. Projeto de cliente, desenvolvido fora do curso."
+        "description": "Site de uma empresa de locação de carretas para transporte de jet skis, com os serviços Take Use e Take and Back, pontos de retirada e devolução e contato, feito com HTML, CSS e JavaScript. Projeto de cliente, desenvolvido fora do curso.",
+        "slug": "lets-go-carretas"
     },
     {
+        "slug": "bmr-garage",
         "name": "BMR Garage",
         "description": "Catálogo online de veículos seminovos feito para uma loja de carros, com busca, filtros, destaques e painel administrativo para a loja cadastrar os carros. Projeto de cliente, desenvolvido fora do curso.",
         "img": "/img/img-projetos/bmrgarage.png",
